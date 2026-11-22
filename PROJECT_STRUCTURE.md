@@ -29,4 +29,4 @@
 
 Run the midpoint examples from the repository root. The examples write generated plots such as `custom_analysis.png` and `batch_convergence.png` in the working directory. The [paper README](paper/README.md) explains how to regenerate the Taylor manuscript's figures and tables.
 
-For the Gram-preconditioned variational neural network (GP-VNN) paper, start with the [versioned reproducibility directory](https://github.com/fs3012093583/Hypersingular-Integral-Equation-/tree/7a45bdd0d940b2473259ba2025320023d1767f38/reproducibility/jsc). It includes its own installation and training instructions.
+For the Gram-preconditioned variational neural network (GP-VNN) paper, start with the [GP-VNN reproducibility branch](https://github.com/fs3012093583/Hypersingular-Integrals/tree/GPVNN). It includes its own installation and training instructions.

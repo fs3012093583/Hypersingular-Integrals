@@ -1,12 +1,16 @@
-# Numerical Solvers for Hypersingular Integral Equations
+# Hypersingular Integrals
 
 This repository contains conventional and neural network solvers for finite-part integral equations, together with numerical experiments and manuscript materials.
 
-## GP-VNN paper and reproducibility
+## Research papers
+
+The main branch contains the shared project materials. Each paper has its own branch with the code, data, and instructions for reproducing its results.
+
+### GP-VNN
 
 The paper *A Gram-preconditioned variational neural network method for hypersingular integral equations* studies first-kind equations with even-order kernels. It uses a finite-part adjoint pairing to compute residuals from ordinary integral moments and a Gram loss that measures a polynomial projection of the solution error.
 
-The [versioned reproducibility directory](https://github.com/fs3012093583/Hypersingular-Integral-Equation-/tree/7a45bdd0d940b2473259ba2025320023d1767f38/reproducibility/jsc) contains the training code, quadrature inputs, 135 training records for kernel orders 2, 4, and 6, and scripts for regenerating the reported accuracy and timing summaries. Start with the README in that directory to reproduce the paper's experiments.
+The [GP-VNN reproducibility branch](https://github.com/fs3012093583/Hypersingular-Integrals/tree/GPVNN) contains the training code, quadrature inputs, 135 training records for kernel orders 2, 4, and 6, and scripts for regenerating the reported accuracy and timing summaries. Start with the README on that branch to reproduce the paper's experiments.
 
 ## Quick start for the midpoint solver
 

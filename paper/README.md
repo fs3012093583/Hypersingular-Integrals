@@ -1,6 +1,6 @@
 # Taylor-Based Manuscript and Reproduction Guide
 
-The main source is [main.tex](main.tex). The table and figure generators read structured experiment results. For the separate GP-VNN paper, see its [versioned code and data](https://github.com/fs3012093583/Hypersingular-Integral-Equation-/tree/7a45bdd0d940b2473259ba2025320023d1767f38/reproducibility/jsc).
+The main source is [main.tex](main.tex). The table and figure generators read structured experiment results. For the separate GP-VNN paper, see its [code and data](https://github.com/fs3012093583/Hypersingular-Integrals/tree/GPVNN).
 
 ## Operator benchmarks with audited reference values
 
