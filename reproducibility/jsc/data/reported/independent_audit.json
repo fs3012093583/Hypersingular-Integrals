@@ -1,0 +1,539 @@
+{
+  "status": "passed",
+  "independent_numpy_states": 81,
+  "checks": [
+    {
+      "run": "m2_exp_pinn_seed20261030",
+      "stage": "initial",
+      "numpy_l2": 1.9338116750110697,
+      "l2_absolute_defect": 1.532107773982716e-14
+    },
+    {
+      "run": "m2_exp_pinn_seed20261030",
+      "stage": "adam",
+      "numpy_l2": 0.04176628667280401,
+      "l2_absolute_defect": 3.0322966360074588e-15
+    },
+    {
+      "run": "m2_exp_pinn_seed20261030",
+      "stage": "final",
+      "numpy_l2": 3.287163499022202e-05,
+      "l2_absolute_defect": 6.746448018291051e-17,
+      "l2_refinement_absolute": 6.790493731548275e-17
+    },
+    {
+      "run": "m2_exp_pinn_seed20261031",
+      "stage": "initial",
+      "numpy_l2": 1.9496647391904747,
+      "l2_absolute_defect": 1.5765166949677223e-14
+    },
+    {
+      "run": "m2_exp_pinn_seed20261031",
+      "stage": "adam",
+      "numpy_l2": 0.015147403441921479,
+      "l2_absolute_defect": 1.942890293094024e-15
+    },
+    {
+      "run": "m2_exp_pinn_seed20261031",
+      "stage": "final",
+      "numpy_l2": 4.4299432205394735e-05,
+      "l2_absolute_defect": 4.292762976684794e-17,
+      "l2_refinement_absolute": 1.4498493551562408e-16
+    },
+    {
+      "run": "m2_exp_pinn_seed20261032",
+      "stage": "initial",
+      "numpy_l2": 2.0340090465642464,
+      "l2_absolute_defect": 1.7763568394002505e-14
+    },
+    {
+      "run": "m2_exp_pinn_seed20261032",
+      "stage": "adam",
+      "numpy_l2": 0.021644379478097706,
+      "l2_absolute_defect": 2.824129818890242e-15
+    },
+    {
+      "run": "m2_exp_pinn_seed20261032",
+      "stage": "final",
+      "numpy_l2": 3.523748430188911e-05,
+      "l2_absolute_defect": 5.372899391023478e-17,
+      "l2_refinement_absolute": 3.319691526879054e-17
+    },
+    {
+      "run": "m4_exp_pinn_seed20261030",
+      "stage": "initial",
+      "numpy_l2": 1.9338116750110697,
+      "l2_absolute_defect": 1.532107773982716e-14
+    },
+    {
+      "run": "m4_exp_pinn_seed20261030",
+      "stage": "adam",
+      "numpy_l2": 0.21204775296946196,
+      "l2_absolute_defect": 1.4710455076283324e-15
+    },
+    {
+      "run": "m4_exp_pinn_seed20261030",
+      "stage": "final",
+      "numpy_l2": 0.00441825315079292,
+      "l2_absolute_defect": 1.6566609195578508e-16,
+      "l2_refinement_absolute": 4.0245584642661925e-16
+    },
+    {
+      "run": "m4_exp_pinn_seed20261031",
+      "stage": "initial",
+      "numpy_l2": 1.9496647391904747,
+      "l2_absolute_defect": 1.5765166949677223e-14
+    },
+    {
+      "run": "m4_exp_pinn_seed20261031",
+      "stage": "adam",
+      "numpy_l2": 0.1904580152108905,
+      "l2_absolute_defect": 1.27675647831893e-15
+    },
+    {
+      "run": "m4_exp_pinn_seed20261031",
+      "stage": "final",
+      "numpy_l2": 0.0005714013198680754,
+      "l2_absolute_defect": 1.5352302762394743e-16,
+      "l2_refinement_absolute": 6.505213034913027e-17
+    },
+    {
+      "run": "m4_exp_pinn_seed20261032",
+      "stage": "initial",
+      "numpy_l2": 2.0340090465642464,
+      "l2_absolute_defect": 1.7763568394002505e-14
+    },
+    {
+      "run": "m4_exp_pinn_seed20261032",
+      "stage": "adam",
+      "numpy_l2": 0.23677094269037785,
+      "l2_absolute_defect": 1.5543122344752192e-15
+    },
+    {
+      "run": "m4_exp_pinn_seed20261032",
+      "stage": "final",
+      "numpy_l2": 0.002456055322936232,
+      "l2_absolute_defect": 1.201296007113939e-16,
+      "l2_refinement_absolute": 1.9081958235744878e-16
+    },
+    {
+      "run": "m6_exp_pinn_seed20261030",
+      "stage": "initial",
+      "numpy_l2": 1.9338116750110697,
+      "l2_absolute_defect": 1.532107773982716e-14
+    },
+    {
+      "run": "m6_exp_pinn_seed20261030",
+      "stage": "adam",
+      "numpy_l2": 0.8004146079813882,
+      "l2_absolute_defect": 5.551115123125783e-15
+    },
+    {
+      "run": "m6_exp_pinn_seed20261030",
+      "stage": "final",
+      "numpy_l2": 0.004701403733594833,
+      "l2_absolute_defect": 7.355227538141662e-16,
+      "l2_refinement_absolute": 4.510281037539698e-16
+    },
+    {
+      "run": "m6_exp_pinn_seed20261031",
+      "stage": "initial",
+      "numpy_l2": 1.9496647391904747,
+      "l2_absolute_defect": 1.5765166949677223e-14
+    },
+    {
+      "run": "m6_exp_pinn_seed20261031",
+      "stage": "adam",
+      "numpy_l2": 0.7198557723400626,
+      "l2_absolute_defect": 4.884981308350689e-15
+    },
+    {
+      "run": "m6_exp_pinn_seed20261031",
+      "stage": "final",
+      "numpy_l2": 0.0019994468856674645,
+      "l2_absolute_defect": 6.015153652949579e-16,
+      "l2_refinement_absolute": 1.6219664500383146e-16
+    },
+    {
+      "run": "m6_exp_pinn_seed20261032",
+      "stage": "initial",
+      "numpy_l2": 2.0340090465642464,
+      "l2_absolute_defect": 1.7763568394002505e-14
+    },
+    {
+      "run": "m6_exp_pinn_seed20261032",
+      "stage": "adam",
+      "numpy_l2": 0.718182987584196,
+      "l2_absolute_defect": 4.9960036108132044e-15
+    },
+    {
+      "run": "m6_exp_pinn_seed20261032",
+      "stage": "final",
+      "numpy_l2": 0.018854562020840647,
+      "l2_absolute_defect": 9.71445146547012e-17,
+      "l2_refinement_absolute": 1.7555401576885288e-15
+    },
+    {
+      "run": "m2_polynomial_pinn_seed20261030",
+      "stage": "initial",
+      "numpy_l2": 0.13309172830141408,
+      "l2_absolute_defect": 3.885780586188048e-16
+    },
+    {
+      "run": "m2_polynomial_pinn_seed20261030",
+      "stage": "adam",
+      "numpy_l2": 0.13829080373001237,
+      "l2_absolute_defect": 9.992007221626409e-16
+    },
+    {
+      "run": "m2_polynomial_pinn_seed20261030",
+      "stage": "final",
+      "numpy_l2": 0.011969138670116135,
+      "l2_absolute_defect": 8.500145032286355e-17,
+      "l2_refinement_absolute": 1.1535911115245767e-15
+    },
+    {
+      "run": "m2_polynomial_pinn_seed20261031",
+      "stage": "initial",
+      "numpy_l2": 0.14117193234555192,
+      "l2_absolute_defect": 2.220446049250313e-16
+    },
+    {
+      "run": "m2_polynomial_pinn_seed20261031",
+      "stage": "adam",
+      "numpy_l2": 0.13776066373875961,
+      "l2_absolute_defect": 9.992007221626409e-16
+    },
+    {
+      "run": "m2_polynomial_pinn_seed20261031",
+      "stage": "final",
+      "numpy_l2": 0.009892682588841009,
+      "l2_absolute_defect": 9.71445146547012e-17,
+      "l2_refinement_absolute": 9.645062526431047e-16
+    },
+    {
+      "run": "m2_polynomial_pinn_seed20261032",
+      "stage": "initial",
+      "numpy_l2": 0.24603386818779224,
+      "l2_absolute_defect": 3.524958103184872e-15
+    },
+    {
+      "run": "m2_polynomial_pinn_seed20261032",
+      "stage": "adam",
+      "numpy_l2": 0.13800014660549173,
+      "l2_absolute_defect": 1.0269562977782698e-15
+    },
+    {
+      "run": "m2_polynomial_pinn_seed20261032",
+      "stage": "final",
+      "numpy_l2": 0.011425374850228725,
+      "l2_absolute_defect": 1.0061396160665481e-16,
+      "l2_refinement_absolute": 1.1084883011491797e-15
+    },
+    {
+      "run": "m4_polynomial_pinn_seed20261030",
+      "stage": "initial",
+      "numpy_l2": 0.13309172830141408,
+      "l2_absolute_defect": 3.885780586188048e-16
+    },
+    {
+      "run": "m4_polynomial_pinn_seed20261030",
+      "stage": "adam",
+      "numpy_l2": 0.14902652558135632,
+      "l2_absolute_defect": 1.0824674490095276e-15
+    },
+    {
+      "run": "m4_polynomial_pinn_seed20261030",
+      "stage": "final",
+      "numpy_l2": 0.1380083228368492,
+      "l2_absolute_defect": 9.992007221626409e-16,
+      "l2_refinement_absolute": 1.3433698597964394e-14
+    },
+    {
+      "run": "m4_polynomial_pinn_seed20261031",
+      "stage": "initial",
+      "numpy_l2": 0.14117193234555192,
+      "l2_absolute_defect": 2.220446049250313e-16
+    },
+    {
+      "run": "m4_polynomial_pinn_seed20261031",
+      "stage": "adam",
+      "numpy_l2": 0.139123919827677,
+      "l2_absolute_defect": 9.992007221626409e-16
+    },
+    {
+      "run": "m4_polynomial_pinn_seed20261031",
+      "stage": "final",
+      "numpy_l2": 0.13745997640944999,
+      "l2_absolute_defect": 1.0269562977782698e-15,
+      "l2_refinement_absolute": 1.3350431871117507e-14
+    },
+    {
+      "run": "m4_polynomial_pinn_seed20261032",
+      "stage": "initial",
+      "numpy_l2": 0.24603386818779224,
+      "l2_absolute_defect": 3.524958103184872e-15
+    },
+    {
+      "run": "m4_polynomial_pinn_seed20261032",
+      "stage": "adam",
+      "numpy_l2": 0.10993525771171495,
+      "l2_absolute_defect": 6.938893903907228e-16
+    },
+    {
+      "run": "m4_polynomial_pinn_seed20261032",
+      "stage": "final",
+      "numpy_l2": 0.1376439082609743,
+      "l2_absolute_defect": 9.992007221626409e-16,
+      "l2_refinement_absolute": 1.3405943022348765e-14
+    },
+    {
+      "run": "m6_polynomial_pinn_seed20261030",
+      "stage": "initial",
+      "numpy_l2": 0.13309172830141408,
+      "l2_absolute_defect": 3.885780586188048e-16
+    },
+    {
+      "run": "m6_polynomial_pinn_seed20261030",
+      "stage": "adam",
+      "numpy_l2": 0.1490267854042499,
+      "l2_absolute_defect": 1.0824674490095276e-15
+    },
+    {
+      "run": "m6_polynomial_pinn_seed20261030",
+      "stage": "final",
+      "numpy_l2": 0.13799328554959617,
+      "l2_absolute_defect": 9.992007221626409e-16,
+      "l2_refinement_absolute": 1.3433698597964394e-14
+    },
+    {
+      "run": "m6_polynomial_pinn_seed20261031",
+      "stage": "initial",
+      "numpy_l2": 0.14117193234555192,
+      "l2_absolute_defect": 2.220446049250313e-16
+    },
+    {
+      "run": "m6_polynomial_pinn_seed20261031",
+      "stage": "adam",
+      "numpy_l2": 0.13912397280968392,
+      "l2_absolute_defect": 1.0269562977782698e-15
+    },
+    {
+      "run": "m6_polynomial_pinn_seed20261031",
+      "stage": "final",
+      "numpy_l2": 0.13744551773488226,
+      "l2_absolute_defect": 9.992007221626409e-16,
+      "l2_refinement_absolute": 1.3378187446733136e-14
+    },
+    {
+      "run": "m6_polynomial_pinn_seed20261032",
+      "stage": "initial",
+      "numpy_l2": 0.24603386818779224,
+      "l2_absolute_defect": 3.524958103184872e-15
+    },
+    {
+      "run": "m6_polynomial_pinn_seed20261032",
+      "stage": "adam",
+      "numpy_l2": 0.10993459015883109,
+      "l2_absolute_defect": 6.938893903907228e-16
+    },
+    {
+      "run": "m6_polynomial_pinn_seed20261032",
+      "stage": "final",
+      "numpy_l2": 0.1376298172571291,
+      "l2_absolute_defect": 1.0269562977782698e-15,
+      "l2_refinement_absolute": 1.3350431871117507e-14
+    },
+    {
+      "run": "m2_sine_pinn_seed20261030",
+      "stage": "initial",
+      "numpy_l2": 0.9784082541359181,
+      "l2_absolute_defect": 6.994405055138486e-15
+    },
+    {
+      "run": "m2_sine_pinn_seed20261030",
+      "stage": "adam",
+      "numpy_l2": 1.0016497909583324,
+      "l2_absolute_defect": 7.327471962526033e-15
+    },
+    {
+      "run": "m2_sine_pinn_seed20261030",
+      "stage": "final",
+      "numpy_l2": 0.9986912080732555,
+      "l2_absolute_defect": 7.216449660063518e-15,
+      "l2_refinement_absolute": 9.681144774731365e-14
+    },
+    {
+      "run": "m2_sine_pinn_seed20261031",
+      "stage": "initial",
+      "numpy_l2": 0.9684295280553109,
+      "l2_absolute_defect": 6.8833827526759706e-15
+    },
+    {
+      "run": "m2_sine_pinn_seed20261031",
+      "stage": "adam",
+      "numpy_l2": 1.0016441261789002,
+      "l2_absolute_defect": 7.327471962526033e-15
+    },
+    {
+      "run": "m2_sine_pinn_seed20261031",
+      "stage": "final",
+      "numpy_l2": 0.9978467376585822,
+      "l2_absolute_defect": 7.216449660063518e-15,
+      "l2_refinement_absolute": 9.670042544485113e-14
+    },
+    {
+      "run": "m2_sine_pinn_seed20261032",
+      "stage": "initial",
+      "numpy_l2": 0.9327925201295709,
+      "l2_absolute_defect": 5.218048215738236e-15
+    },
+    {
+      "run": "m2_sine_pinn_seed20261032",
+      "stage": "adam",
+      "numpy_l2": 1.0016489972674254,
+      "l2_absolute_defect": 7.105427357601002e-15
+    },
+    {
+      "run": "m2_sine_pinn_seed20261032",
+      "stage": "final",
+      "numpy_l2": 0.9944847028769054,
+      "l2_absolute_defect": 7.216449660063518e-15,
+      "l2_refinement_absolute": 9.636735853746359e-14
+    },
+    {
+      "run": "m4_sine_pinn_seed20261030",
+      "stage": "initial",
+      "numpy_l2": 0.9784082541359181,
+      "l2_absolute_defect": 6.994405055138486e-15
+    },
+    {
+      "run": "m4_sine_pinn_seed20261030",
+      "stage": "adam",
+      "numpy_l2": 1.0000686336226916,
+      "l2_absolute_defect": 7.327471962526033e-15
+    },
+    {
+      "run": "m4_sine_pinn_seed20261030",
+      "stage": "final",
+      "numpy_l2": 1.1397497413933064,
+      "l2_absolute_defect": 7.993605777301127e-15,
+      "l2_refinement_absolute": 1.1035616864774056e-13
+    },
+    {
+      "run": "m4_sine_pinn_seed20261031",
+      "stage": "initial",
+      "numpy_l2": 0.9684295280553109,
+      "l2_absolute_defect": 6.8833827526759706e-15
+    },
+    {
+      "run": "m4_sine_pinn_seed20261031",
+      "stage": "adam",
+      "numpy_l2": 1.0000587515063368,
+      "l2_absolute_defect": 7.327471962526033e-15
+    },
+    {
+      "run": "m4_sine_pinn_seed20261031",
+      "stage": "final",
+      "numpy_l2": 1.0688009314162792,
+      "l2_absolute_defect": 7.771561172376096e-15,
+      "l2_refinement_absolute": 1.0347278589506459e-13
+    },
+    {
+      "run": "m4_sine_pinn_seed20261032",
+      "stage": "initial",
+      "numpy_l2": 0.9327925201295709,
+      "l2_absolute_defect": 5.218048215738236e-15
+    },
+    {
+      "run": "m4_sine_pinn_seed20261032",
+      "stage": "adam",
+      "numpy_l2": 1.0000654822459343,
+      "l2_absolute_defect": 7.327471962526033e-15
+    },
+    {
+      "run": "m4_sine_pinn_seed20261032",
+      "stage": "final",
+      "numpy_l2": 1.1785193656089439,
+      "l2_absolute_defect": 8.43769498715119e-15,
+      "l2_refinement_absolute": 1.141309269314661e-13
+    },
+    {
+      "run": "m6_sine_pinn_seed20261030",
+      "stage": "initial",
+      "numpy_l2": 0.9784082541359181,
+      "l2_absolute_defect": 6.994405055138486e-15
+    },
+    {
+      "run": "m6_sine_pinn_seed20261030",
+      "stage": "adam",
+      "numpy_l2": 1.0000158236371663,
+      "l2_absolute_defect": 7.327471962526033e-15
+    },
+    {
+      "run": "m6_sine_pinn_seed20261030",
+      "stage": "final",
+      "numpy_l2": 0.9984879235852568,
+      "l2_absolute_defect": 7.216449660063518e-15,
+      "l2_refinement_absolute": 9.692247004977617e-14
+    },
+    {
+      "run": "m6_sine_pinn_seed20261031",
+      "stage": "initial",
+      "numpy_l2": 0.9684295280553109,
+      "l2_absolute_defect": 6.8833827526759706e-15
+    },
+    {
+      "run": "m6_sine_pinn_seed20261031",
+      "stage": "adam",
+      "numpy_l2": 1.0000061336651922,
+      "l2_absolute_defect": 7.327471962526033e-15
+    },
+    {
+      "run": "m6_sine_pinn_seed20261031",
+      "stage": "final",
+      "numpy_l2": 0.9987180147117911,
+      "l2_absolute_defect": 7.216449660063518e-15,
+      "l2_refinement_absolute": 9.703349235223868e-14
+    },
+    {
+      "run": "m6_sine_pinn_seed20261032",
+      "stage": "initial",
+      "numpy_l2": 0.9327925201295709,
+      "l2_absolute_defect": 5.218048215738236e-15
+    },
+    {
+      "run": "m6_sine_pinn_seed20261032",
+      "stage": "adam",
+      "numpy_l2": 1.0000129283876744,
+      "l2_absolute_defect": 7.327471962526033e-15
+    },
+    {
+      "run": "m6_sine_pinn_seed20261032",
+      "stage": "final",
+      "numpy_l2": 0.9986096558323228,
+      "l2_absolute_defect": 7.216449660063518e-15,
+      "l2_refinement_absolute": 9.692247004977617e-14
+    }
+  ],
+  "max_l2_absolute_defect": 1.7763568394002505e-14,
+  "source_data_hashes_verified": true,
+  "native_audit_status": "numerical_advisories",
+  "original_numerical_advisories_retained": [
+    "m6_exp_pinn_seed20261030/adam",
+    "m6_exp_pinn_seed20261030/final",
+    "m6_exp_pinn_seed20261031/final",
+    "m6_exp_pinn_seed20261032/final",
+    "m6_sine_pinn_seed20261032/final"
+  ],
+  "threshold_repaired_records": [
+    "m6_exp_pinn_seed20261030",
+    "m6_exp_pinn_seed20261031",
+    "m6_exp_pinn_seed20261032",
+    "m6_sine_pinn_seed20261032"
+  ],
+  "reference_convergence": "passed",
+  "repair_reference_convergence": "passed",
+  "native_numerical_advisories": [],
+  "manuscript_promotion_allowed": true
+}
