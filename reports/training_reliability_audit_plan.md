@@ -1,40 +1,39 @@
-# 训练过程中的误差指标可靠性：下一轮实验协议
+# Training Reliability Audit Plan
 
-## Material Passport
+**Status** — Proposed experiment.
 
-- 状态：实验设计，尚未执行；不作为论文结果。
-- 研究问题：初始网络上标定的自动微分误差、定期更新的导数幅值包络，在 Adam 与 L-BFGS 的中间网络上是否仍能覆盖实际差商误差？
-- 依据：已完成的四阶配对运行记录显示，第 100 步更新时观测到的导数超过旧包络，第 200 步的部分高阶导数仍有超界。这是幅值包络的反例，不等于差商误差预算或最终解误差失守。
-- 范围：先审计现有双精度四、六阶求解器，不增加制造解，不计作加速试验，不改变正在运行的配对批次。
+The audit asks whether the automatic differentiation error estimates calibrated on the initial network and the periodically updated derivative envelopes cover the observed divided-difference errors at intermediate Adam and L-BFGS states. In a completed fourth-order paired run, derivatives observed at update 100 exceeded the previous envelope, and some higher derivatives still exceeded it at update 200. These observations concern the derivative envelope. The audit will measure the divided-difference and solution errors separately.
 
-## 一、保存实际被优化器使用的状态
+The first audit covers the existing fourth- and sixth-order double-precision solvers and their existing manufactured solutions. Use an independent run for instrumentation and record audit costs separately from solver timings.
 
-在独立审计运行中保存网络参数、当前包络、校准版本、训练节点及权重、优化器阶段和步数。保留初态、每次包络更新的前后、更新间隔的中点、Adam 末态及 L-BFGS 试探与接受状态；L-BFGS 必须区分函数评估次数与接受迭代，不能只记录最终网络。先用一个种子检验记录工具，确认插入观察器未改变同一确定性配置的参数与损失，再扩展到原有三个种子。
+## 1. Save the states used by the optimizer
 
-包络更新前后的比较使用同一网络，唯一变化是包络本身。训练检查点与高精度审计分开运行，避免审计成本混入原训练计时；保留二者各自的耗时。
+Save the network parameters, current envelope, calibration version, training nodes and weights, optimizer stage, and step count. Include initialization, the states before and after each envelope update, the midpoint between updates, the final Adam state, and trial and accepted L-BFGS states. Track L-BFGS function evaluations and accepted iterations separately.
 
-## 二、分开检验三件事
+Start with one seed. Verify that instrumentation preserves the parameter and loss sequences for the same deterministic configuration, then extend the audit to the three original seeds. Use the same network for the before-and-after envelope comparison. Run the high-precision audit separately from checkpoint collection and retain both timings.
 
-1. **导数误差**：以实际存储的参数和坐标构建 100 位 Taylor-jet 参考；误差相减与尺度化在高精度中完成。检查实际 AD 误差是否小于当时采用的 `eta`。独立审计点不能仅取包络校准网格。
-2. **幅值包络**：检查各阶参考导数是否超过当时的 `B`，分别统计刚更新、两次更新之间、L-BFGS 三种状态。采样覆盖只是观测证据，不是线段上确界认证。
-3. **实际算子误差**：对预先指定的目标行保留完整训练求积规则，计算精确存储输入下的加权绝对差商误差，并与当时的行指标和预算比较。另报解析矩与累加误差；不能把完整算子误差超界归咎于差商指标。
+## 2. Check the three sources of evidence
 
-首轮目标行覆盖最小近对角距离、内区间中部和端点附近；若只审计部分行，分母必须明确，不报告成所有配置行或所有训练步的覆盖率。抽样规则在读取实际误差前固定。高精度位数再增加一次，核查所报差值已稳定。
+1. **Derivative error.** Build a Taylor-jet reference at 100 decimal digits from the stored parameters and coordinates. Use high precision for subtraction and scaling. Compare the observed automatic differentiation error with the current `eta` at independent audit points, including points outside the envelope calibration grid.
+2. **Derivative envelope.** Compare the reference derivatives at each order with the current `B`. Report the observed coverage just after updates, between updates, and during L-BFGS. State the coverage in terms of the sampled points.
+3. **Operator error.** For preselected target rows, retain the full training quadrature rule and compute the weighted absolute divided-difference error for the stored inputs. Compare it with the row indicator and budget. Report the contributions from analytic moments and accumulation separately.
 
-## 三、必须保留的失败情况
+Select rows near the smallest diagonal distances, in the interior, and near the endpoints. State the number of audited rows and states when reporting coverage. Fix the sampling rule before inspecting the measured errors. Increase the reference precision once more to check that the reported differences have stabilized.
 
-分别统计“指标判定达标”“实际差商误差达标”“指标达标但实际超预算”。达到最高候选阶数仍未满足指标预算的状态单独报告，不计作成功。旧包络超界而实际差商仍达标，也应保留，避免把包络保守性与结果错误混为一谈。
+## 3. Record failures and mismatches
 
-若观察到误接受，先定位是 AD 校准、余项包络还是其他算术项所致；只在定位后比较更频繁更新、训练初期保守策略或额外误差检查，且把新增成本纳入新的配对试验。不得通过放宽预算或删除失败检查点来恢复覆盖率。
+Count states for which the indicator meets the budget, states for which the measured divided-difference error meets the budget, and cases in which the indicator accepts a state whose measured error exceeds the budget. Report separately the states that remain above budget at the highest candidate order. Retain cases in which the previous envelope is exceeded while the actual divided-difference error stays within budget.
 
-## 四、参数梯度是另一个检查
+If false acceptance occurs, identify whether it comes from automatic differentiation calibration, the remainder envelope, or another arithmetic contribution. Compare possible changes such as more frequent updates, a larger early-training envelope, or additional error checks under the original budget. Include the additional costs in new paired trials and retain all audited checkpoints.
 
-前向差商误差小不保证参数梯度准确。先在固定分支选择下，用独立高精度方向导数核查残差损失的参数梯度；再在分支切换邻域检查扰动引起的梯度变化。固定分支的导数与重新选择分支后的差分不能混作同一参考。有限差分如用于辅助检验，需步长收敛检查，不作为唯一高精度真值。
+## 4. Audit parameter gradients separately
 
-## 五、决定下一步的门槛
+First check parameter gradients of the residual loss using independent high-precision directional derivatives with the branch selection fixed. Then measure the change in gradient under perturbations near branch switches. Report fixed-branch derivatives and differences with branch reselection separately. If finite differences are used as a supplementary check, verify convergence under step-size refinement.
 
-- 有误接受：先修可靠性，不继续扩展应用规模或主张认证。
-- 样本内无误接受，但只在初始网络成立：证据不足，补训练中间态。
-- 完成预设训练轨迹审计且实际精度稳定：再做固定 `p=0,1,2,3` 的按需实现及优化 AD 后端的精度—成本对照。
+## 5. Use the audit to decide the next benchmark
 
-最终可支持的结论仍须与证据范围一致：有限训练轨迹上的可靠经验控制，不能自动升级为任意网络、全区间或跨精度的误差保证。
+- If false acceptance occurs, diagnose and correct the indicator before extending the application.
+- If the current evidence covers only initialization, assess intermediate training states before drawing conclusions about the trajectory.
+- If the prespecified trajectory audit shows stable accuracy, compare on-demand implementations for fixed orders $p=0,1,2,3$ and optimized automatic differentiation backends.
+
+Report empirical error control for the audited training trajectories, test points, and arithmetic precision.
